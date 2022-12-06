@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #edede9;
+}
+
+.my-todo {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: #fff;
+  box-shadow: 3px 3px 20px #888;
+}
+
+.title-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #dedbd2;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dedbd2;
+}
+
+.fa-turn-down-left {
+  color: red;
+}
+
+label {
+  display: none;
+}
+
+.to-do {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #dedbd2;
+}
+
+.inp-p {
+  display: flex;
+  gap: 20px;
+}
+
+.clear {
+  padding: 10px;
+  background: #edede9;
+  text-align: center;
+}
+
+.clear-btn {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: #888;
+}
