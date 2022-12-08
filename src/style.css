@@ -31,8 +31,6 @@ body {
   border-bottom: 1px solid #dedbd2;
 }
 
-
-
 label {
   display: none;
 }
@@ -105,7 +103,6 @@ article {
 }
 
 .edit-input {
- 
   width: 30em;
   border: none;
   outline: none;
