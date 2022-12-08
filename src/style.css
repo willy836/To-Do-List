@@ -31,9 +31,7 @@ body {
   border-bottom: 1px solid #dedbd2;
 }
 
-.fa-turn-down-left {
-  color: red;
-}
+
 
 label {
   display: none;
@@ -62,6 +60,28 @@ article {
   gap: 20px;
 }
 
+.icons {
+  display: flex;
+  gap: 30px;
+}
+
+.fa-ellipsis-vertical {
+  cursor: pointer;
+}
+
+.hide-optionBtn {
+  display: none;
+}
+
+.fa-trash {
+  display: none;
+  cursor: pointer;
+}
+
+.show-trash {
+  display: inline-block;
+}
+
 .clear {
   padding: 10px;
   background: #edede9;
@@ -73,4 +93,29 @@ article {
   outline: none;
   font-size: 25px;
   color: #888;
+  cursor: pointer;
+}
+
+.list-container {
+  display: none;
+}
+
+.show-container {
+  display: block;
+}
+
+.edit-input {
+ 
+  width: 30em;
+  border: none;
+  outline: none;
+  background: #e9d8a6;
+}
+
+.hide {
+  display: none;
+}
+
+.edit-article {
+  background: #e9d8a6;
 }
