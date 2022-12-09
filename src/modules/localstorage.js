@@ -18,6 +18,7 @@ const removeFromLocalStorage = (index) => {
   });
 
   localStorage.setItem('tasks', JSON.stringify(todoArr));
+  window.location.reload();
 };
 
 const editLocalStorage = (task, status, index) => {
