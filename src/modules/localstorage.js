@@ -12,7 +12,6 @@ const removeFromLocalStorage = (index) => {
 
   todoArr = todoArr.filter((todo) => {
     if (todo.index !== index) {
-      console.log(todo.index)
       return true;
     }
     return false;
