@@ -3,7 +3,7 @@ import {
   addToLocalStorage, removeFromLocalStorage, editLocalStorage,
 } from './modules/localstorage.js';
 import resetIndex from './modules/resetIndex.js';
-import {  clearCompletedTask } from './modules/updateTask.js';
+import clearCompletedTask from './modules/updateTask.js';
 
 const listContainer = document.querySelector('.list-container');
 const form = document.querySelector('.form');
@@ -32,38 +32,38 @@ const addTask = (e) => {
     <i class="fa-solid fa-ellipsis-vertical"></i>
     <i class="fa-solid fa-trash-clock fa-trash"></i>
 </div>`;
-const checkboxes = article.querySelectorAll('.checkb');
-checkboxes.forEach((checkbox)=> {
-  checkbox.addEventListener('change', (e)=> {
-    if(checkbox.checked === true){
-      const todoTask = e.target.nextElementSibling.childNodes[0];
-      todoTask.style.textDecoration = 'line-through';
-      const todoArticle = e.target.parentElement.parentElement;
-      const { index } = todoArticle.dataset;
-      const todoArr = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-      todoArr.filter((todo) => {
-        if (todo.index === index) {
-          todo.completedStatus = true;
+    const checkboxes = article.querySelectorAll('.checkb');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', (e) => {
+        if (checkbox.checked === true) {
+          const todoTask = e.target.nextElementSibling.childNodes[0];
+          todoTask.style.textDecoration = 'line-through';
+          const todoArticle = e.target.parentElement.parentElement;
+          const { index } = todoArticle.dataset;
+          const todoArr = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+          todoArr.filter((todo) => {
+            if (todo.index === index) {
+              todo.completedStatus = true;
+            }
+            return false;
+          });
+          localStorage.setItem('tasks', JSON.stringify(todoArr));
+        } else {
+          const todoTask = e.target.nextElementSibling.childNodes[0];
+          todoTask.style.textDecoration = 'none';
+          const todoArticle = e.target.parentElement.parentElement;
+          const { index } = todoArticle.dataset;
+          const todoArr = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+          todoArr.filter((todo) => {
+            if (todo.index === index) {
+              todo.completedStatus = false;
+            }
+            return false;
+          });
+          localStorage.setItem('tasks', JSON.stringify(todoArr));
         }
-        return false;
       });
-      localStorage.setItem('tasks', JSON.stringify(todoArr));
-    }else {
-      const todoTask = e.target.nextElementSibling.childNodes[0];
-      todoTask.style.textDecoration = 'none';
-      const todoArticle = e.target.parentElement.parentElement;
-      const { index } = todoArticle.dataset;
-      const todoArr = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-      todoArr.filter((todo) => {
-        if (todo.index === index) {
-          todo.completedStatus = false;
-        }
-        return false;
-      });
-      localStorage.setItem('tasks', JSON.stringify(todoArr));
-    }
-  });
-})
+    });
     const optionBtn = article.querySelector('.fa-ellipsis-vertical');
     const deleteBtn = article.querySelector('.fa-trash');
     optionBtn.addEventListener('click', (e) => {
@@ -147,9 +147,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <i class="fa-solid fa-trash-clock fa-trash"></i>
       </div>`;
       const checkboxes = article.querySelectorAll('.checkb');
-      checkboxes.forEach((checkbox)=> {
-        checkbox.addEventListener('change', (e)=> {
-          if(checkbox.checked === true){
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', (e) => {
+          if (checkbox.checked === true) {
             const todoTask = e.target.nextElementSibling.childNodes[0];
             todoTask.style.textDecoration = 'line-through';
             const todoArticle = e.target.parentElement.parentElement;
@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
               return false;
             });
             localStorage.setItem('tasks', JSON.stringify(todoArr));
-          }else {
+          } else {
             const todoTask = e.target.nextElementSibling.childNodes[0];
             todoTask.style.textDecoration = 'none';
             const todoArticle = e.target.parentElement.parentElement;
@@ -177,8 +177,8 @@ window.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('tasks', JSON.stringify(todoArr));
           }
         });
-      })
-      
+      });
+
       const optionBtn = article.querySelector('.fa-ellipsis-vertical');
       const deleteBtn = article.querySelector('.fa-trash');
       optionBtn.addEventListener('click', (e) => {
