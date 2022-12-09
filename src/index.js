@@ -224,6 +224,7 @@ window.addEventListener('DOMContentLoaded', () => {
         removeFromLocalStorage(index);
 
         resetIndex();
+        window.location.reload();
       });
       todoList.appendChild(article);
       listContainer.classList.add('show-container');

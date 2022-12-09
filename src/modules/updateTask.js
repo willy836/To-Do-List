@@ -13,4 +13,4 @@ const clearCompletedTask = () => {
   window.location.reload();
 };
 
-export default { clearCompletedTask };
+export default clearCompletedTask;
