@@ -12,12 +12,14 @@ const removeFromLocalStorage = (index) => {
 
   todoArr = todoArr.filter((todo) => {
     if (todo.index !== index) {
+      console.log(todo.index)
       return true;
     }
     return false;
   });
 
   localStorage.setItem('tasks', JSON.stringify(todoArr));
+  window.location.reload();
 };
 
 const editLocalStorage = (task, status, index) => {
