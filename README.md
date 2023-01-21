@@ -31,16 +31,17 @@
 ## 🛠 Built With <a name="built-with">Webpack</a>
 
 ### Tech Stack <a name="tech-stack">
+
 - Javascript
 - HTML
 - CSS
-</a>
+  </a>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://willy836.github.io/To-Do-List/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,8 +54,9 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
- - IDE(Code editor) eg VScode
- - Git
+
+- IDE(Code editor) eg VScode
+- Git
 
 ### Setup
 
